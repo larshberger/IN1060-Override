@@ -65,7 +65,7 @@ void skruPaaLys(int indeks){
 }
 
 //Denne metoden skrur av alle lysene UNNTATT det første og siste lyset. 
-//Disse skal lyse hele tiden for å at fototransistoren skal kunne registrere en verdi selv i mørke rom
+//Disse skal lyse hele tiden for at fototransistoren skal kunne registrere en verdi selv i mørke rom
 void lysAv(){
   FastLED.clear();
   leds[0] = CRGB::White;
@@ -82,12 +82,4 @@ void blinkRoedt(){
   FastLED.clear();
   FastLED.show();
   delay(800);
-}
-
-
-if(sensorVerdi < terskel){
-  //kode som skrur på systemet
-}
-else{
-  //kode som skrur av systemet
 }
