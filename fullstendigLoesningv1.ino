@@ -22,7 +22,6 @@ void loop() {
   int lysVerdi = analogRead(sensor);
 
   if(lysVerdi < terskel){
-
     if (indeks == 0){       
       startTid = millis();
       forrigeOppdateringTid = millis();
