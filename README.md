@@ -1,6 +1,8 @@
 # IN1060-Override
 _Vi er en gruppe på 5 studenter som tok emnet IN1060 ved UiO våren 2024_
 
+Svært kort forklart er det vi har skapt en "dockingstasjon" for vannflaskene til gamere. Denne er utstyrt med en led-stripe for å kommunisere med brukeren og en fototransistor for å registrere hvorvidt flasken er i flaskeholderen. Poenget er at lysene skal minne brukeren på å huske å drikke vann.
+
 Her har vi skrevet en forklaring av hele koden :) Koden er delt opp for å gjøre forklaringen enklere. Den fullstendige koden helt fri for kommentarer finnes i repo'en og heter _"fullstendigLoesningv1.ino"_.
 
 ### Definering og initalisering 
