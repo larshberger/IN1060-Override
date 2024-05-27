@@ -6,12 +6,13 @@ Svært kort forklart er det vi har skapt en "dockingstasjon" for vannflaskene ti
 Her har vi skrevet en forklaring av hele koden :) Koden er delt opp for å gjøre forklaringen enklere. Den fullstendige koden helt fri for kommentarer finnes i repo'en og heter _"fullstendigLoesningv1.ino"_.
 
 ### Definering og initalisering 
-Helt i starten i koden setter vi opp diverse makroer og variabler, samt inkluderer biblioteket "FastLed" som brukes til å drive ledstripen. Alle makroene / variablene har beskrivende navn, så jeg kommer ikke til å gå inn på hva hver enkelt er. Den eneste som kan være vært å nevne er "terskel" dette er verdien som sensoren må synke under for at "systemet" skal starte.
+Helt i starten i koden setter vi opp diverse makroer og variabler, samt inkluderer biblioteket "FastLed" som brukes til å drive ledstripen. Alle makroene / variablene har beskrivende navn, så jeg kommer ikke til å gå inn på hva hver enkelt er. Den eneste som kan være vært å nevne er "terskel" dette er verdien som sensoren må synke under for at "systemet" skal starte. Bruker fortalte oss også at standard lysstyrke (255) var litt sterkt, så vi definerer en lavere lysstyrke.
 ```c++
 #include <FastLED.h>
 #define farge   CRGB::Purple
 #define led_port  8
 #define ant_leds  15
+#define lysstyrke  150
 #define sensor A1
 #define terskel 40
 #define animasjonsTid  600000
@@ -64,7 +65,8 @@ Enkelt forklart fungerer loopen vår slik: Vi kontinuerlig leser verdien til sen
 ```c++
 void setup() {
   pinMode(sensor, INPUT);
-  FastLED.addLeds<NEOPIXEL, led_port>(leds, ant_leds); 
+  FastLED.addLeds<NEOPIXEL, led_port>(leds, ant_leds);
+  FastLED.setBrightness(lysstyrke); 
 }
 
 void loop() {
