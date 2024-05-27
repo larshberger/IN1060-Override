@@ -2,6 +2,7 @@
 #define farge   CRGB::Purple
 #define led_port  8
 #define ant_leds  15
+#define lysstyrke  150
 #define sensor A1
 #define terskel 40
 #define animasjonsTid  600000
@@ -16,6 +17,7 @@ CRGB leds[ant_leds];
 void setup() {
   pinMode(sensor, INPUT);
   FastLED.addLeds<NEOPIXEL, led_port>(leds, ant_leds); 
+  FastLED.setBrightness(lysstyrke);
 }
 
 void loop() {
